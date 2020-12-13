@@ -8,7 +8,7 @@
   + run `php artisan ui bootstrap` 
   + run `npm install` 
   + run `npm run dev`
-  <br><br><br>
+  <br><br><br><br><br><br>
 
  <strong style="color:red; font-size:30px;">2</strong> Create One more Larvel Authentication for Admin. Follow Process
 
@@ -108,4 +108,20 @@
   + For seeding run `php artisan db:seed`
 
 
-  + Now Let's try to login as a `Admin`
+ + Now Let's try to login as a `Admin`
+ <br><br><br> <br><br><br>
+
+
+
+
+
+<strong style="color:red; font-size:30px;">3</strong>Replace Laravel Admin page to our tamplate page 
+
+  + Go to this link, download & extract admin tamplate ``
+  + Go to extracted tamplate and copy require `css, img, js, scss, lib` folder. Then paste it inside project `public\backend` folder
+  + Now create a `common backend master blade file` inside Admin. Because Every admin view , there have some common `code and link`. Such that `sidebar & topbar`
+  + Open all tamplate file, inside a edittor and copy all `link,src` then put inside `backend master file`
+  + For Fresh coading i create some `partof` backend master file.Such that... Link,src,topheader,sidebar etc
+  + you find home page code inside tamplate `index.html` file
+  + You also find some essential code from tamplate.
+     
