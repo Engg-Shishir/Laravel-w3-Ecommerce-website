@@ -35,3 +35,6 @@ Route::post('/admin',[LoginController::class,'login']);
 
 #---====== Admin home page  ======------>
 Route::get('/admin/home', [AdminController::class, 'index']);
+
+#---====== Admin Logout ======------>
+Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');

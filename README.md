@@ -124,4 +124,13 @@
   + For Fresh coading i create some `partof` backend master file.Such that... Link,src,topheader,sidebar etc
   + you find home page code inside tamplate `index.html` file
   + You also find some essential code from tamplate.
+<br><br><br> <br><br><br>
+
+
+
      
+<strong style="color:red; font-size:30px;">4</strong> Create Admin Logout System
+
+  + create logout route `Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');`
+
+  + create `logout` function inside `AdminController.php`
