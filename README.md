@@ -2,4 +2,4 @@
 <br><br><br>
 
 >## Process
-+ Install Laravel Default Authentication`composer require laravel/ui` && `php artisan ui:auth`
++ Install Laravel Default Authentication`composer require laravel/ui` && `php artisan ui:auth` && `php artisan ui bootstrap` && `npm install` && `npm run dev`
