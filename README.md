@@ -153,3 +153,13 @@
 
 
 
+  
+<strong style="color:red; font-size:30px;">5</strong> Admin brand Control
+
++ First create `model,migration,controller`
++ run `php artisan make:controller Admin\BrandController`
++ run `php artisan make:model Brand -m`
++ put essential table field inside `migration`, also add `$fillable` property inside `Model`
++ run `php artisan migrate`
++ create route for Brand manage `Route::get('/admin/brand',[BrandController::class,'index'])->name('admin.brand')`
+
