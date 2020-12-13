@@ -148,3 +148,8 @@
 + put essential table field inside `migration`, also add `$fillable` property inside `Model`
 + run `php artisan migrate`
 + create route for category manage `Route::get('/admin/categorys',[CategoryController::class,'index'])->name('admin.categorys')`
+<br><br><br> <br><br><br>
+
+
+
+

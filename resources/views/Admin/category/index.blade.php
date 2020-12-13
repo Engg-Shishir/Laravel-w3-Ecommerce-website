@@ -18,15 +18,9 @@
          <strong class="text-danger h3">All Category Details</strong>
        </div>
        <div class="card-body">
-        <!--======== If session hs message =========-->
-        @if(Session::has('message'))
-          <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-          <strong>{{Session::get('message')}}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-         @endif
+         <!--======== Include Success Message =========-->
+         @include('include.success')
+         @include('include.error')
           <div class="table-wrapper">
             <!--======== Category DataTable =========-->
             <table id="datatable1" class="table display responsive nowrap table-vordered table-hover">
@@ -79,15 +73,6 @@
          </div>
 
         <div class="card-body">
-          @if(Session::has('cat_insert'))
-          <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-            <!--======== Check Session have any cat_insert message =========-->
-          <strong>{{Session::get('cat_insert')}}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          @endif
 
           <!--======== Store category Form =========-->
           <form  action="{{route('store.category')}}" method="POST">

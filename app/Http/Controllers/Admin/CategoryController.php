@@ -23,7 +23,7 @@ class CategoryController extends Controller
     #<-------===== Store Category ======------>
     public function store(Request $request)
     {
-        #<-------===== Custom Validation Message ======------>
+        #<-------===== Custom Validation success ======------>
         $request->validate([
             'cat_name' => 'required|unique:categories,cat_name',
         ],[
@@ -35,13 +35,13 @@ class CategoryController extends Controller
             'created_at' => Carbon::now()
         ]);
     
-        return back()->with('cat_insert','Category Inserted');
+        return back()->with('success','Category Inserted');
     }
     #<-------===== Delete Category ======------>
     public function delete($id)
     {
         Category::find($id)->delete();
-        return back()->with('message','Category Deleted');
+        return back()->with('error','Category Deleted');
     }
     #<---====== Category Edit ======------>
     public function edit($id)
@@ -52,7 +52,7 @@ class CategoryController extends Controller
     #<-------===== Update Category ======------>
     public function update(Request $request)
     {
-        #<-------===== Custom Validation Message ======------>
+        #<-------===== Custom Validation success ======------>
         $request->validate([
             'cat_name' => 'required|unique:categories,cat_name',
         ],[
@@ -64,7 +64,7 @@ class CategoryController extends Controller
             'updated_at' => Carbon::now()
         ]);
     
-        return Redirect()->route('admin.categorys')->with('message','Category Updated');
+        return Redirect()->route('admin.categorys')->with('success','Category Updated');
     }
     #<---====== Category Status Manage ======------>
     public function status($cid,$status)
@@ -83,7 +83,7 @@ class CategoryController extends Controller
 
         }
 
-        return back()->with('message',' Status Updated');
+        return back()->with('success',' Status Updated');
     }
 
     
