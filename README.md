@@ -132,5 +132,19 @@
 <strong style="color:red; font-size:30px;">4</strong> Create Admin Logout System
 
   + create logout route `Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');`
-
   + create `logout` function inside `AdminController.php`
+  <br><br><br> <br><br><br>
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">4</strong> Admin category Control
+
++ First create `model,migration,controller`
++ run `php artisan make:controller Admin\CategoryCotroller`
++ run `php artisan make:model Category -m`
++ put essential table field inside `migration`, also add `$fillable` property inside `Model`
++ run `php artisan migrate`
++ create route for category manage `Route::get('/admin/categorys',[CategoryController::class,'index'])->name('admin.categorys')`

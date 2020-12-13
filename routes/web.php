@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 #---====== Include Usabble Controller ======------>
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
 
 
 /*
@@ -38,3 +39,23 @@ Route::get('/admin/home', [AdminController::class, 'index']);
 
 #---====== Admin Logout ======------>
 Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');
+
+#---====== Admin categorys ======------>
+Route::get('/admin/categorys',[CategoryController::class,'index'])->name('admin.categorys');
+
+#---====== Category store  ======------>
+Route::post('/admin/category_store',[CategoryController::class,'store'])->name('store.category');
+
+#---====== Category Delete ======------>
+Route::get('/admin/category/delete/{id}',[CategoryController::class,'delete']);
+
+
+#---====== Category Edit ======------>
+Route::get('/admin/category/edit/{id}',[CategoryController::class,'edit']);
+
+
+#---====== Category Update  ======------>
+Route::post('/admin/category_update',[CategoryController::class,'update'])->name('update.category');
+
+#---====== Manage Category Status ======------>
+Route::get('/admin/category/status/{cid}/{status}',[CategoryController::class,'status']);
