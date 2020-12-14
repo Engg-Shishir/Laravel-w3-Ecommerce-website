@@ -230,3 +230,19 @@
 + create route for Order manage `Route::get('/admin/order',[OrderController::class,'index'])->name('admin.order');`
 <br><br><br> <br><br><br>
 
+
+
+
+
+<strong style="color:red; font-size:30px;">10</strong>Replace Laravel welcome page to our tamplate page 
+  
+  + create a controller `php artisan make:controller Frontend\FrontendController` 
+  + create a route for home page `Route::get('/',[FrontendController::class, 'index'])->name('front.home');`
+  + Go to this link, download & extract frontend tamplate ``
+  + Go to extracted tamplate and copy require `css, js, fonts` folder. Then paste it inside project `public\Frontend` folder
+  + Now create a `common frontend master blade file` inside Frontend. Because Every frontend view , there have some common `code and link`. Such that `sidebar & topbar & footr & dropdown`
+  + Open all tamplate file, inside a edittor and copy all `link,src` then put inside `backend master file`
+  + For Fresh coading i create some `partof` frontend master file.Such that... Link,src,topheader,sidebar etc
+  + you find home page code inside tamplate `index.html` file
+  + You also find some essential code from tamplate.
+<br><br><br> <br><br><br>

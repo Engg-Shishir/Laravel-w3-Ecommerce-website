@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CuponController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Frontend\FrontendController;
 
 
 
@@ -164,3 +165,17 @@ Route::get('/admin/order',[OrderController::class,'index'])->name('admin.order')
 
 #---====== Order View ======------>
 Route::get('/admin/order/view/{id}',[OrderController::class,'view']);
+
+
+
+
+
+
+
+
+
+
+
+###############---====== Frontend ======------##############>
+###############---====== Frontend ======------##############>
+Route::get('/',[FrontendController::class, 'index'])->name('front.home');
