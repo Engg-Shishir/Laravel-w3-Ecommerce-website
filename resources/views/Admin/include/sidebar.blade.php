@@ -41,8 +41,8 @@
         </div><!--========= menu-item =========-->
       </a><!--========= sl-menu-link =========-->
       <ul class="sl-menu-sub nav flex-column">
-      <li class="nav-item"><a href="{{-- {{route('add-products')}} --}}" class="nav-link @yield('add-products')">Add Product</a></li> 
-        <li class="nav-item"><a href="{{-- {{route('manage-products')}} --}}" class="nav-link @yield('manage-products')">Manage Product</a></li>
+      <li class="nav-item"><a href="{{route('product_form_show')}}" class="nav-link @yield('add-products')">Add Product</a></li> 
+        <li class="nav-item"><a href="{{route('manage_product')}}" class="nav-link @yield('manage-products')">Manage Product</a></li>
       </ul>
 
       <a href="{{-- {{route('admin.cupon')}} --}}" class="sl-menu-link @yield('cupon')">

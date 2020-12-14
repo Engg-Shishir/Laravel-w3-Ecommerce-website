@@ -140,7 +140,7 @@
 
 
 
-<strong style="color:red; font-size:30px;">4</strong> Admin category Control
+<strong style="color:red; font-size:30px;">5</strong> Admin category Control
 
 + First create `model,migration,controller`
 + run `php artisan make:controller Admin\CategoryCotroller`
@@ -154,7 +154,7 @@
 
 
   
-<strong style="color:red; font-size:30px;">5</strong> Admin brand Control
+<strong style="color:red; font-size:30px;">6</strong> Admin brand Control
 
 + First create `model,migration,controller`
 + run `php artisan make:controller Admin\BrandController`
@@ -162,4 +162,40 @@
 + put essential table field inside `migration`, also add `$fillable` property inside `Model`
 + run `php artisan migrate`
 + create route for Brand manage `Route::get('/admin/brand',[BrandController::class,'index'])->name('admin.brand')`
+<br><br><br> <br><br><br>
+
+
+
+
+
+<strong style="color:red; font-size:30px;">7</strong> Admin product Control
+
++ First create `model,migration,controller`
++ run `php artisan make:controller Admin\ProductController`
++ run `php artisan make:model Product -m`
++ put essential table field inside `migration`, also add `$fillable` property inside `Model`
++ run `php artisan migrate`
++ create route for Product manage `Route::get('/admin/product',[ProductController::class,'product_form_show'])->name('product_form_show');`
++ now install image intervention package to work with image `composer require intervention/image`
++ create configuration in `config\app.php`
+  ```php
+  # In the $providers array add the service providers for this package.
+  Intervention\Image\ImageServiceProvider::class
+
+  # Add the facade of this package to the $aliases array.
+  'Image' => Intervention\Image\Facades\Image::class
+  ```
++ Publish intervention configuration ` php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent" `
++ use `use Intervention\Image\ImageManager;`  & `use Image;` in `ProductController`
++ Create your folder inside public directory as you want. Suppose `public\frontend\img\produt\upload`
++ use `enctype="multipart/form-data"` inside form, othewise image is not insert
++ ceate another route to manage product `Route::get('/admin/manage/product',[ProductController::class,'manage'])->name('manage_product');`
++ join category table with product table using Laravel model join function
+  ```php    
+    public function category()
+    {
+        # this function gate category according to product category
+        return $this->belongsTo(Category::class,'category_id');
+    }
+  ```
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\ProductController;
 
 
 /*
@@ -81,3 +82,29 @@ Route::post('/admin/brand_update',[BrandController::class,'update'])->name('upda
 
 #---====== Brand status Manage ======------>
 Route::get('/admin/brand/status/{bid}/{status}',[BrandController::class,'status']);
+
+
+###############---====== Open Add Product Form ======------##############>
+Route::get('/admin/product',[ProductController::class,'product_form_show'])->name('product_form_show');
+
+#---====== Store Product  ======------>
+Route::post('/admin/store/product',[ProductController::class,'store'])->name('store.product');
+
+#---====== Manage Product ======------>
+Route::get('/admin/manage/product',[ProductController::class,'manage'])->name('manage_product');
+
+
+#---====== Product Delete ======------>
+Route::get('/admin/product/delete/{id}',[ProductController::class,'delete']);
+
+#---====== Product Edit ======------>
+Route::get('/admin/product/edit/{id}',[ProductController::class,'edit']);
+
+#---====== Product Update ======------>
+Route::post('/admin/product/update',[ProductController::class,'update'])->name('update.product');
+
+#---====== Update Product Image ======------>
+Route::post('/admin/product/update/image',[ProductController::class,'product_update_image'])->name('update.pimage');
+
+#---====== Product status ======------>
+Route::get('/admin/product/status/{pid}/{status}',[ProductController::class,'status']);
