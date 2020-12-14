@@ -198,4 +198,20 @@
         return $this->belongsTo(Category::class,'category_id');
     }
   ```
+<br><br><br> <br><br><br>
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">8</strong> Admin Cupon Control
+
++ First create `model,migration,controller`
++ run `php artisan make:controller Admin\CuponController`
++ run `php artisan make:model Cupon -m`
++ put essential table field inside `migration`, also add `$fillable` property inside `Model`
++ run `php artisan migrate`
++ create route for Brand manage `Route::get('/admin/cupon',[CuponController::class,'index'])->name('admin.cupon')`;
+<br><br><br> <br><br><br>
 

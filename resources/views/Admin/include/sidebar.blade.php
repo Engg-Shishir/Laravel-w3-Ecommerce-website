@@ -45,7 +45,7 @@
         <li class="nav-item"><a href="{{route('manage_product')}}" class="nav-link @yield('manage-products')">Manage Product</a></li>
       </ul>
 
-      <a href="{{-- {{route('admin.cupon')}} --}}" class="sl-menu-link @yield('cupon')">
+      <a href="{{route('admin.cupon')}}" class="sl-menu-link @yield('cupon')">
         <div class="sl-menu-item">
           <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
           <span class="menu-item-label">Cupon</span>

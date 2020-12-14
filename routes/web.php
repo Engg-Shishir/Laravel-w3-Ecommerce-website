@@ -7,6 +7,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\CuponController;
+
 
 
 /*
@@ -27,6 +29,10 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+
+
+
 ##############---====== Admin Login View ======------##############>
 ##############---====== Admin Login View ======------##############>
 Route::get('/admin',[LoginController::class,'showLoginForm'])->name('admin.login');
@@ -40,6 +46,9 @@ Route::get('/admin/home', [AdminController::class, 'index']);
 
 #---====== Admin Logout ======------>
 Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');
+
+
+
 
 
 
@@ -64,6 +73,9 @@ Route::get('/admin/category/status/{cid}/{status}',[CategoryController::class,'s
 
 
 
+
+
+
 ###############---====== Admin Brand Page======------##############>
 ###############---====== Admin Brand Page======------##############>
 Route::get('/admin/brand',[BrandController::class,'index'])->name('admin.brand');
@@ -84,7 +96,12 @@ Route::post('/admin/brand_update',[BrandController::class,'update'])->name('upda
 Route::get('/admin/brand/status/{bid}/{status}',[BrandController::class,'status']);
 
 
-###############---====== Open Add Product Form ======------##############>
+
+
+
+
+###############---====== Open Product Manage ======------##############>
+###############---====== Open Product Manage ======------##############>
 Route::get('/admin/product',[ProductController::class,'product_form_show'])->name('product_form_show');
 
 #---====== Store Product  ======------>
@@ -92,7 +109,6 @@ Route::post('/admin/store/product',[ProductController::class,'store'])->name('st
 
 #---====== Manage Product ======------>
 Route::get('/admin/manage/product',[ProductController::class,'manage'])->name('manage_product');
-
 
 #---====== Product Delete ======------>
 Route::get('/admin/product/delete/{id}',[ProductController::class,'delete']);
@@ -108,3 +124,27 @@ Route::post('/admin/product/update/image',[ProductController::class,'product_upd
 
 #---====== Product status ======------>
 Route::get('/admin/product/status/{pid}/{status}',[ProductController::class,'status']);
+
+
+
+
+
+
+###############---====== Admin Cupon manage ======------##############>
+###############---====== Admin Cupon manage ======------##############>
+Route::get('/admin/cupon',[CuponController::class,'index'])->name('admin.cupon');
+
+#---====== Cupon Add  ======------>
+Route::post('/admin/cupon/store',[CuponController::class,'store'])->name('store.cupon');
+
+#---====== Cupon Delete ======------>
+Route::get('/admin/cupon/delete/{id}',[CuponController::class,'delete']);
+
+#---====== Cupon Edit ======------>
+Route::get('/admin/cupon/edit/{id}',[CuponController::class,'edit']);
+
+#---====== Cupon Update  ======------>
+Route::post('/admin/cupon/update',[CuponController::class,'update'])->name('update.cupon');
+
+#---====== Cupon status Manage ======------>
+Route::get('/admin/cupon/status/{cid}/{status}',[CuponController::class,'status']);
