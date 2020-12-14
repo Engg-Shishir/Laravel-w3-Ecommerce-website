@@ -52,7 +52,7 @@
         </div><!--========= menu-item =========-->
       </a><!--========= sl-menu-link =========-->
 
-      <a href="{{-- {{route('admin.order')}} --}}" class="sl-menu-link @yield('order')">
+      <a href="{{route('admin.order')}}" class="sl-menu-link @yield('order')">
         <div class="sl-menu-item">
           <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
           <span class="menu-item-label">Order</span>

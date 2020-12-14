@@ -215,3 +215,18 @@
 + create route for Brand manage `Route::get('/admin/cupon',[CuponController::class,'index'])->name('admin.cupon')`;
 <br><br><br> <br><br><br>
 
+
+
+
+
+
+<strong style="color:red; font-size:30px;">9</strong> Admin Order Control
+
++ First create `model,migration,controller`
++ create a controller `php artisan make:controller Admin\OrderController`
++ run `php artisan make:model Order -m`
++ put essential table field inside `migration`, also add `$guarded` property inside `Model`
++ run `php artisan migrate`
++ create route for Order manage `Route::get('/admin/order',[OrderController::class,'index'])->name('admin.order');`
+<br><br><br> <br><br><br>
+
