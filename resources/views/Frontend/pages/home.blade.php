@@ -1,7 +1,7 @@
 @extends('Frontend.master')
 @section('title') Home @endsection
 @section('frontend_content')
-@include('Frontend.include.hero')
+  @include('Frontend.include.hero')
       
 <!--========= Categories Section Begin =========-->
 <section class="categories">
@@ -49,9 +49,9 @@
               <div class="featured__item">
                  <div class="featured__item__pic set-bg" data-setbg="{{asset($item->image_one)}}">
                       <ul class="featured__item__pic__hover">
-                          <li><a href="{{url('/add/to_wishlist/'.$item->id)}}"><i class="fa fa-heart"></i></a></li>
+                          <li><a href="{{url('/user/add/wishlist/'.$item->id)}}"><i class="fa fa-heart"></i></a></li>
                           <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                          <form action="{{url('/add/to_cart/'.$item->id)}}" method="POST">
+                          <form action="{{url('/user/add/cart/'.$item->id)}}" method="POST">
                               @csrf
                               <input type="hidden" name="price" value="{{$item->price}}">
                               <li><button type="submit" style="border-radius: 60%;background-color:#00a59d;border: none;"><i class="fa fa-shopping-cart"></i></button></li>

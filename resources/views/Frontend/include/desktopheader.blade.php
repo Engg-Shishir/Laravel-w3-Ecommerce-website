@@ -86,7 +86,7 @@
                     </ul>
                 </nav>
             </div>
-{{--             <div class="col-lg-3">
+            <div class="col-lg-3">
                 @auth
                     @php
                     $total = App\Models\Cart::all()->where('user_ip', Request()->ip())->sum(function($t){
@@ -94,13 +94,13 @@
                     });
 
                     $quantity = App\Models\Cart::all()->where('user_ip', Request()->ip())->sum('qty');
-                    $wishquantity = App\Models\WishList::where('user_id', Auth::id())->get();
+                    $wishquantity = App\Models\Wishlist::where('user_id', Auth::id())->get();
                     @endphp 
                 <div class="header__cart">
                     <ul>
                         @auth
-                        <li><a href="{{url('/wishlist')}}"><i class="fa fa-heart"></i> <span>{{count($wishquantity)}}</span></a></li>
-                        <li><a href="{{url('/cart')}}"><i class="fa fa-shopping-bag"></i> <span>{{$quantity}}</span></a></li>
+                        <li><a href="{{url('/user/wishlist')}}"><i class="fa fa-heart"></i> <span>{{count($wishquantity)}}</span></a></li>
+                        <li><a href="{{url('/user/cart')}}"><i class="fa fa-shopping-bag"></i> <span>{{$quantity}}</span></a></li>
                         @else
                         @endauth
                     </ul>
@@ -115,7 +115,7 @@
                     <div class="header__cart__price">item: <span>$0</span></div>
                 </div>
                 @endauth
-            </div> --}}
+            </div>
         </div>
         <div class="humberger__open">
             <i class="fa fa-bars"></i>

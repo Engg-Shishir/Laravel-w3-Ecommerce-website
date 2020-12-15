@@ -6,10 +6,11 @@
                 @include('Frontend.include.category')
             </div>
         </div>
+        <!--======== Include Success Message =========-->
+        @include('include.error')
+        @include('include.success')
         <div class="row">
             <div class="col-lg-12">
-
-	
                 <div class="hero__item set-bg" data-setbg="{{asset('frontend')}}/img/hero/banner.jpg">
                     <div class="hero__text">
                         <span>FRUIT FRESH</span>

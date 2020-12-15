@@ -2,7 +2,7 @@
 @section('title') User SignIn @endsection
 @section('frontend_content')
 @include('Frontend.include.category')
-<!-- Hero Section Begin -->
+
 <div class="mt-3"></div>
 <div class="container">
     <div class="row justify-content-center">
@@ -10,6 +10,8 @@
             <div class="card bg-dark text-light">
 
                 <div class="card-body">
+                    <!--======== Include Success Message =========-->
+                    @include('include.error')
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

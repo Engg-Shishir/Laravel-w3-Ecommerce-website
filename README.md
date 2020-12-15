@@ -256,3 +256,44 @@
 
 <strong style="color:red; font-size:30px;">11</strong> User registration, login & logout setup
 <br><br><br> <br><br><br>
+
+
+
+
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">12</strong> User wishlist & shopping cart setup
+
++ First create `model,migration,controller`
++ Second Compleate Adding system
++ Thirdly compleate Wishlist page setup
++ Finally compleate Cart page setup
+
++ create a controller `php artisan make:controller User\WishlistController`
++ run `php artisan make:model Wishlist -m`
++ ceate join `wishlists` table with `products` table
+```php
+  public function product()
+  {
+      return $this->belongsTo(Product::class,'product_id');
+  }
+  ```
+
++ create a controller `php artisan make:controller User\CartController`
++ run `php artisan make:model Cart -m`
++ ceate join `carts` table with `products` table
+  ```php
+    public function product()
+    {
+        return $this->belongsTo(Product::class,'pro_id');
+    }
+  ```
+  
++ put essential table field inside `migration`, also add `$fillable` property inside `Model`
+
++ run `php artisan migrate`
+<br><br><br> <br><br><br>

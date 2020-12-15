@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CuponController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\User\WishlistController;
+use App\Http\Controllers\User\CartController;
 
 
 
@@ -179,3 +181,47 @@ Route::get('/admin/order/view/{id}',[OrderController::class,'view']);
 ###############---====== Frontend ======------##############>
 ###############---====== Frontend ======------##############>
 Route::get('/',[FrontendController::class, 'index'])->name('front.home');
+
+
+
+
+
+
+
+
+
+
+
+###############---====== User Wishlist & Shopping Cart Manage ======------##############>
+###############---====== User Wishlist & Shopping Cart Manage ======------##############>
+
+#---====== Add To wishlist ======------>
+Route::get('/user/add/wishlist/{id}',[WishlistController::class,'addToWishList']);
+
+#---====== Add To Cart ======------>
+Route::post('/user/add/cart/{id}',[CartController::class,'addToCart']);
+
+#---====== Wishlist page ======------>
+Route::get('/user/wishlist',[WishlistController::class,'home']);
+
+#---====== Wishlist Delete ======------>
+Route::get('/user/wishlist/remove/{id}',[WishlistController::class,'remove']);
+
+
+
+#---====== Cart page ======------>
+Route::get('/user/cart',[CartController::class,'home']);
+
+#---====== Cart quantity update ======------>
+Route::post('/cart/qty/update/{id}',[CartController::class,'qty_update']);
+
+#---====== Cart remove ======------>
+Route::get('/cart/remove/{id}',[CartController::class,'remove']);
+
+
+
+#---====== Cupon Applay ======------>
+Route::post('/cupon/aplay',[CartController::class,'cupon_aplay']);
+
+#---====== Cupon remove ======------>
+Route::get('/cupon/remove',[CartController::class,'cupon_remove']);
