@@ -1,13 +1,15 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('Frontend.master')
+@section('title') User SignUp @endsection
+@section('frontend_content')
+@include('Frontend.include.category')
+<!-- Hero Section Begin -->
+<div class="mt-3"></div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
+                <div class="card-body bg-dark text-light" >
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -62,8 +64,8 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-8 m-auto">
+                                <button type="submit" class="btn btn-light form-control">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -74,4 +76,5 @@
         </div>
     </div>
 </div>
+<div class="mb-3"></div>
 @endsection

@@ -1,7 +1,7 @@
 @extends('Frontend.master')
 @section('title') Home @endsection
 @section('frontend_content')
-  @include('Frontend.include.hero')
+@include('Frontend.include.hero')
       
 <!--========= Categories Section Begin =========-->
 <section class="categories">

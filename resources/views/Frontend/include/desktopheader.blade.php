@@ -35,20 +35,20 @@
                             <span class="arrow_carrot-down"></span>
                             <ul>
                                 @auth 
-                                <li><a href="{{-- {{route('home')}} --}}"><i class="fa fa-user"></i> Profile</a></li>
+                                <li><a href="{{route('home')}}"><i class="fa fa-user"></i> Profile</a></li>
                                 <li>
-                                    <a  href="{{-- {{ route('logout') }} --}}"
+                                    <a  href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <form id="logout-form" action="{{-- {{ route('logout') }} --}}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </li>
                                 @else 
-                                <li><a href="{{-- {{route('login')}} --}}"><i class="fa fa-user"></i> Login</a></li>
-                                <li><a href="{{-- {{route('register')}} --}}"><i class="fa fa-user"></i> Register</a></li>
+                                <li><a href="{{route('login')}}"><i class="fa fa-user"></i> Login</a></li>
+                                <li><a href="{{route('register')}}"><i class="fa fa-user"></i> Register</a></li>
                                 @endauth
                             </ul>
                         </div>
@@ -86,7 +86,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-lg-3">
+{{--             <div class="col-lg-3">
                 @auth
                     @php
                     $total = App\Models\Cart::all()->where('user_ip', Request()->ip())->sum(function($t){
@@ -115,7 +115,7 @@
                     <div class="header__cart__price">item: <span>$0</span></div>
                 </div>
                 @endauth
-            </div>
+            </div> --}}
         </div>
         <div class="humberger__open">
             <i class="fa fa-bars"></i>

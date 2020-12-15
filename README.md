@@ -246,3 +246,13 @@
   + you find home page code inside tamplate `index.html` file
   + You also find some essential code from tamplate.
 <br><br><br> <br><br><br>
+
+
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">11</strong> User registration, login & logout setup
+<br><br><br> <br><br><br>

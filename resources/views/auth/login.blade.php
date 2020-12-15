@@ -1,11 +1,13 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('Frontend.master')
+@section('title') User SignIn @endsection
+@section('frontend_content')
+@include('Frontend.include.category')
+<!-- Hero Section Begin -->
+<div class="mt-3"></div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+            <div class="card bg-dark text-light">
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -70,4 +72,5 @@
         </div>
     </div>
 </div>
+<div class="mb-3"></div>
 @endsection
