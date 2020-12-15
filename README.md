@@ -321,3 +321,19 @@
 + put essential table field inside `migration`, also add `$guarded` property inside `Model`
 + run `php artisan migrate`
 <br><br><br> <br><br><br>
+
+
+
+
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">14</strong> Manage User Profile
+
++ First create your own profile view.
++ Second go to `HomeController.php` and change view location to your own profle location
++ Create controller `php artisan make:controller User\UserController`
+<br><br><br> <br><br><br>

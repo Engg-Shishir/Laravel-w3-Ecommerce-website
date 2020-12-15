@@ -13,6 +13,7 @@ use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\User\WishlistController;
 use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\CheckoutController;
+use App\Http\Controllers\User\UserController;
 
 
 
@@ -244,3 +245,18 @@ Route::post('/place_order',[CheckoutController::class,'place_order'])->name('pla
 
 #---====== Order Success ======------>
 Route::get('/order/success',[CheckoutController::class,'order_success']);
+
+
+
+
+
+
+
+###############---====== User Profile Setup ======------##############>
+###############---====== CUser Profile Setup  ======------##############>
+
+# User Order Page
+Route::get('/user/order',[UserController::class,'order'])->name('user.order');
+
+# User Order View
+Route::get('/user/order/view/{id}',[UserController::class,'order_view']);
