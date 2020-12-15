@@ -337,3 +337,11 @@
 + Second go to `HomeController.php` and change view location to your own profle location
 + Create controller `php artisan make:controller User\UserController`
 <br><br><br> <br><br><br>
+
+
+
+
+
+<strong style="color:red; font-size:30px;">15</strong> Change Admin Login Form View
+
+<br><br><br> <br><br><br>
