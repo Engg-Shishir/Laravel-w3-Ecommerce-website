@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\User\WishlistController;
 use App\Http\Controllers\User\CartController;
+use App\Http\Controllers\User\CheckoutController;
 
 
 
@@ -225,3 +226,21 @@ Route::post('/cupon/aplay',[CartController::class,'cupon_aplay']);
 
 #---====== Cupon remove ======------>
 Route::get('/cupon/remove',[CartController::class,'cupon_remove']);
+
+
+
+
+
+
+
+###############---====== Checkout Page setup ======------##############>
+###############---====== Checkout Page setup ======------##############>
+
+#---====== Checkout home page ======------>
+Route::get('/checkout',[CheckoutController::class,'home']);
+
+#---====== Place Order ======------>
+Route::post('/place_order',[CheckoutController::class,'place_order'])->name('place_order');
+
+#---====== Order Success ======------>
+Route::get('/order/success',[CheckoutController::class,'order_success']);

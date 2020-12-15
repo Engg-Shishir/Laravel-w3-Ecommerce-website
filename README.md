@@ -297,3 +297,27 @@
 
 + run `php artisan migrate`
 <br><br><br> <br><br><br>
+
+
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">13</strong>Order Checkout
+
++ First create `model,migration,controller` 
++ run `php artisan make:controller User\CheckoutController`
++ run `php artisan make:model Orderitem -m`
++ ceate join `orderitems` table with `products` table
+  ```php
+    public function product()
+    {
+        return $this->belongsTo(Product::class,'product_id');
+    }
+  ```
++ run `php artisan make:model Shipping -m`
++ put essential table field inside `migration`, also add `$guarded` property inside `Model`
++ run `php artisan migrate`
+<br><br><br> <br><br><br>
