@@ -31,6 +31,7 @@
                   <th class="text-center">Image</th>
                   <th class="text-center">Name</th>
                   <th class="text-center">Price</th>
+                  <th class="text-center">Sale Of</th>
                   <th class="text-center">Quantity</th>
                   <th class="text-center">C.Id</th>
                   <th class="text-center">B.Id</th>
@@ -47,6 +48,7 @@
                   </td>
                   <td>{{$product->pro_name}}</td>
                   <td>{{$product->price}}</td>
+                  <td>{{$product->saleof}}</td>
                   <td>{{$product->pro_quantity}}</td>
                   <td>{{$product->category->cat_name}}</td>
                   <td>{{$product->brand_id}}</td>

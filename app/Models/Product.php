@@ -15,6 +15,7 @@ class Product extends Model
         'pro_slug',
         'pro_code',
         'price',
+        'saleof',
         'pro_quantity',
         'short_descrip',
         'long_descrip',

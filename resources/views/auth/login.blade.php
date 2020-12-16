@@ -8,6 +8,9 @@
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card">
+                <!--======== Include Success Message =========-->
+                @include('include.error')
+                @include('include.success')
 
                 <div class="card-body bg-dark text-light">
                     <form method="POST" action="{{ route('login') }}">

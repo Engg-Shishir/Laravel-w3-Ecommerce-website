@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('pro_slug');
             $table->string('pro_code');
             $table->integer('price');
+            $table->integer('saleof');
             $table->string('pro_quantity');
             $table->text('short_descrip');
             $table->text('long_descrip');

@@ -27,7 +27,7 @@
             @csrf
             <div class="form-layout">
               <div class="row mg-b-25">
-                <div class="col-lg-4"><!-- col-4 -->
+                <div class="col-lg-3"><!-- col-4 -->
                   <div class="form-group">
                     <label class="form-control-label">Product Name: <span class="tx-danger">*</span></label>
                     <input class="form-control" type="text" name="pro_name"  placeholder="Enter product name" value="{{old('pro_name')}}">
@@ -36,7 +36,7 @@
                     @enderror
                   </div>
                 </div>
-                <div class="col-lg-4"><!-- col-4 -->
+                <div class="col-lg-3"><!-- col-4 -->
                   <div class="form-group">
                     <label class="form-control-label">Product Code: <span class="tx-danger">*</span></label>
                     <input class="form-control" type="text" name="pro_code"  placeholder="Enter product code" value="{{old('pro_code')}}">
@@ -45,12 +45,21 @@
                     @enderror
                   </div>
                 </div>
-                <div class="col-lg-4"><!-- col-4 -->
+                <div class="col-lg-3"><!-- col-4 -->
                   <div class="form-group">
                     <label class="form-control-label">Price: <span class="tx-danger">*</span></label>
                     <input class="form-control" type="text" name="price" placeholder="Enter product price" value="{{old('price')}}">
                     @error('price')
                   <strong class="text-danger">{{ $message }}</strong> 
+                    @enderror
+                  </div>
+                </div>
+                <div class="col-lg-3"><!-- col-4 -->
+                  <div class="form-group">
+                    <label class="form-control-label">Sale Of: <span class="tx-danger">*</span></label>
+                    <input class="form-control" type="text" name="saleof" placeholder="Enter product Saleof" value="{{old('saleof')}}">
+                    @error('saleof')
+                      <strong class="text-danger">{{ $message }}</strong> 
                     @enderror
                   </div>
                 </div>
