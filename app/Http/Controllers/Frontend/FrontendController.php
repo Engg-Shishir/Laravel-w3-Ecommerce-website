@@ -37,5 +37,13 @@ class FrontendController extends Controller
         $products = Product::where('brand_id',$id)->latest()->paginate(9);
         return view('Frontend.pages.brandshop',compact('products'));
     }
+    #<----======= Product details ========----->
+    public function productdetails($id)
+    {
+        $product = Product::FindOrFail($id);
+        $categoris_id = $product->category_id;
+        $related_product = Product::where('category_id',$categoris_id)->where('id','!=',$id)->latest()->get();
+        return view('Frontend.pages.product_details',compact('product','related_product'));
+    }
 
 }

@@ -282,5 +282,18 @@ Route::get('/shop',[FrontendController::class,'shopage'])->name('shop.page');
 # Category product page
 Route::get('/category/product/{id}',[FrontendController::class,'CategoryProduct']);
 
-# Category product page
+# Brand product page
 Route::get('/brand/product/{id}',[FrontendController::class,'BrandProduct']);
+
+
+
+
+
+
+
+
+###############---====== Shop page Setup ======------##############>
+###############---======  Shop page Setup  ======------##############>
+
+# Product deatils page
+Route::get('/product/details/{id}',[FrontendController::class,'productdetails']);

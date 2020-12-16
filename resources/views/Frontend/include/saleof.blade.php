@@ -24,7 +24,7 @@
                                     <div class="product__discount__percent">{{$item->saleof}}%</div>
                                     <ul class="product__item__pic__hover">
                                         <li><a href="{{url('/user/add/wishlist/'.$item->id)}}"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="{{url('/')}}"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="{{url('/product/details/'.$item->id)}}"><i class="fa fa-retweet"></i></a></li>
                                         <form action="{{url('/user/add/cart/'.$item->id)}}" method="POST">
                                             @csrf
                                             <input type="hidden" name="price" value="{{$item->price}}">
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="product__discount__item__text">
                                     <span>{{$item->pro_code}}</span>
-                                <h5><a href="{{url('/')}}">{{$item->pro_name}}</a></h5>
+                                <h5><a href="{{url('/product/details/'.$item->id)}}">{{$item->pro_name}}</a></h5>
                                     <div class="product__item__price">${{$finally}}<span>${{$item->price}}</span></div>
                                 </div>
                             </div>

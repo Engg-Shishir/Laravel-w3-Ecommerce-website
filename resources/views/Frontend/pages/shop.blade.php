@@ -31,13 +31,17 @@
                         <div class="product__item">
                             <div class="product__item__pic set-bg" data-setbg="{{asset($item->image_one)}}">
                                 <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                  <li><a href="{{url('/user/add/wishlist/'.$item->id)}}"><i class="fa fa-heart"></i></a></li>
+                                  <li><a href="{{url('/product/details/'.$item->id)}}"><i class="fa fa-retweet"></i></a></li>
+                                    <form action="{{url('/user/add/cart/'.$item->id)}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="price" value="{{$item->price}}">
+                                        <li><button type="submit" style="border-radius: 60%;background-color:#00a59d;border: none;"><i class="fa fa-shopping-cart"></i></button></li>
+                                    </form>
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="#">{{$item->pro_name}}</a></h6>
+                                <h6><a href="{{url('/product/details/'.$item->id)}}">{{$item->pro_name}}</a></h6>
                                 <h5>${{$item->price}}</h5>
                             </div>
                         </div>
