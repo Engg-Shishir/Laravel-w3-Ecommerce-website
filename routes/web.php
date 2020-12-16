@@ -253,7 +253,7 @@ Route::get('/order/success',[CheckoutController::class,'order_success']);
 
 
 ###############---====== User Profile Setup ======------##############>
-###############---====== CUser Profile Setup  ======------##############>
+###############---====== User Profile Setup  ======------##############>
 
 # User Order Page
 Route::get('/user/order',[UserController::class,'order'])->name('user.order');
@@ -263,3 +263,24 @@ Route::get('/user/order/view/{id}',[UserController::class,'order_view']);
 
 # User profile update
 Route::post('/user/update/{id}',[UserController::class,'profileUpdate']);
+
+
+
+
+
+
+
+
+
+
+###############---====== Shop page Setup ======------##############>
+###############---======  Shop page Setup  ======------##############>
+
+# View shop page
+Route::get('/shop',[FrontendController::class,'shopage'])->name('shop.page');
+
+# Category product page
+Route::get('/category/product/{id}',[FrontendController::class,'CategoryProduct']);
+
+# Category product page
+Route::get('/brand/product/{id}',[FrontendController::class,'BrandProduct']);

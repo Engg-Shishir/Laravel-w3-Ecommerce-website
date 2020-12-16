@@ -14,7 +14,7 @@
                     @endphp
                     <ul>
                         @foreach ($categorys as $row)
-                          <li><a href="#">{{$row->cat_name}}</a></li>
+                          <li><a href="{{url('/category/product/'.$row->id)}}">{{$row->cat_name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -23,10 +23,6 @@
                 <div class="hero__search">
                     <div class="hero__search__form">
                         <form action="#">
-                            <div class="hero__search__categories">
-                                All Categories
-                                <span class="arrow_carrot-down"></span>
-                            </div>
                             <input type="text" placeholder="What do yo u need?">
                             <button type="submit" class="site-btn">SEARCH</button>
                         </form>

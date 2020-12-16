@@ -1,5 +1,6 @@
 @extends('Frontend.master')
 @section('title') Home @endsection
+@section('home') active @endsection
 @section('frontend_content')
   @include('Frontend.include.hero')
       
@@ -7,15 +8,38 @@
 <section class="categories">
   <div class="container">
       <div class="row">
-          <div class="categories__slider owl-carousel">
-              @foreach ($products as $product)
-              <div class="col-lg-3">
-                  <div class="categories__item set-bg" data-setbg="{{$product->image_one}}">
-                      <h5><a href="#">{{$product->pro_name}}</a></h5>
-                  </div>
-              </div>
-              @endforeach
-          </div>
+
+        <div class="col-md-12">
+            <div class="product__discount">
+                <div class="section-title product__discount__title">
+                    <h2>Sale Off</h2>
+                </div>
+                <div class="row">
+                    <div class="product__discount__slider owl-carousel">
+                        @foreach ($products as $item)
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="{{asset($item->image_one)}}">
+                                    <div class="product__discount__percent">-20%</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <span>{{$item->pro_code}}</span>
+                                <h5><a href="#">{{$item->pro_name}}</a></h5>
+                                    <div class="product__item__price">${{$item->price}} <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
   </div>
 </section>

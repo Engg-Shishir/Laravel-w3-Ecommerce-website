@@ -355,3 +355,26 @@
 
 <strong style="color:red; font-size:30px;">16</strong> Update user profile
 <br><br><br> <br><br><br>
+
+
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">17</strong> Shop page setup
+
++ to add pagination get data this way
+  + `Product::latest()->paginate(3);`
+  + then go to `app/Providers/AppServiceProvider.php`
+  ```php
+  use Illuminate\Pagination\Paginator;
+  public function boot()
+  {
+      //fix for pagination making weird oversize by using bootstraps paginator
+      // solve link : https://stackoverflow.com/questions/64186820/visual-issue-with-laravel-8-pagination-link-method
+      Paginator::useBootstrap();
+  }
+  ```
+<br><br><br> <br><br><br>

@@ -68,9 +68,9 @@
             <div class="col-lg-6">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="{{url('/')}}">Home</a></li>
-                        <li><a href="{{-- {{route('shop.page')}} --}}">Shop</a></li>
-                        <li><a href="#">Pages</a>
+                        <li class="@yield('home')"><a href="{{url('/')}}">Home</a></li>
+                        <li class="@yield('shop')"><a href="{{route('shop.page')}}">Shop</a></li>
+                        <li class="@yield('pages')"><a href="#">Pages</a>
                             @auth
                             <ul class="header__menu__dropdown">
                                 <li><a href="./shop-details.html">Shop Details</a></li>
@@ -81,8 +81,8 @@
                             @else
                             @endauth
                         </li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li class="@yield('blog')"><a href="./blog.html">Blog</a></li>
+                        <li class="@yield('contact')"><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
