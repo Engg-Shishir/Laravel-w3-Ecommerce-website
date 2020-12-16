@@ -260,3 +260,6 @@ Route::get('/user/order',[UserController::class,'order'])->name('user.order');
 
 # User Order View
 Route::get('/user/order/view/{id}',[UserController::class,'order_view']);
+
+# User profile update
+Route::post('/user/update/{id}',[UserController::class,'profileUpdate']);

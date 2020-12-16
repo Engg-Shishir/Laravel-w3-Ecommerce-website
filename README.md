@@ -343,5 +343,15 @@
 
 
 <strong style="color:red; font-size:30px;">15</strong> Change Admin Login Form View
+<br><br><br> <br><br><br>
 
+
+
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">16</strong> Update user profile
 <br><br><br> <br><br><br>

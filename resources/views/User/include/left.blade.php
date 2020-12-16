@@ -3,7 +3,7 @@
   <div class="card-body">
       <div class="row">
           <div class="col-md-8 m-auto">
-              <img src="" alt="" style="border-radius:50%;" height="100%" width="100%">
+              <img src="{{asset(Auth::user()->photo)}}" alt="" style="border-radius:50%;" height="100%" width="100%">
           </div>
           <div class="col-md-10 m-auto">
               <div class="row">
