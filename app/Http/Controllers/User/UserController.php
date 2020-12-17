@@ -23,7 +23,8 @@ class UserController extends Controller
         $orders = Order::where('user_id',Auth::id())->latest()->get();
         return view('User.order',compact('orders'));
     }
-     # User Order View
+
+    # User Order View
     public function order_view($id)
     {
         $orders = Order::findOrFail($id);
@@ -32,7 +33,7 @@ class UserController extends Controller
         return view('User.order_view',compact('orders','orderitems','shipping'));
     }
 
-
+    # User profile update
     public function profileUpdate(Request $request, $id)
     {
         #<-------===== Custom Validation Message ======------>

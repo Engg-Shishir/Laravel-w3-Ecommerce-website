@@ -1,15 +1,18 @@
 @extends('Frontend.master')
 @section('title') User Profile @endsection
-@section('breadcumb_title') Profile @endsection
+
+@if (Auth::user()->status == 1)
+  @section('breadcumb_title') Profile @endsection
+  @else
+  @section('breadcumb_title') Profile Inactive @endsection
+@endif
+
 @section('frontend_content')
-
-
 
 @include('Frontend.include.category')
 @include('Frontend.include.breadcrumb')
 
-
-
+@if (Auth::user()->status == 1)
 <div class="container mt-4 mb-3">
   <div class="row">
       <div class="col-md-4">
@@ -72,7 +75,7 @@
       </div>
       
   </div>
-  </div>
-
-
+</div>
+@else
+@endif
 @endsection

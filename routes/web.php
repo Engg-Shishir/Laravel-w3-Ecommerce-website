@@ -14,6 +14,7 @@ use App\Http\Controllers\User\WishlistController;
 use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Admin\UsersController;
 
 
 
@@ -297,3 +298,20 @@ Route::get('/brand/product/{id}',[FrontendController::class,'BrandProduct']);
 
 # Product deatils page
 Route::get('/product/details/{id}',[FrontendController::class,'productdetails']);
+
+
+
+
+
+
+
+
+
+###############---====== Admin user page Setup ======------##############>
+###############---======  Admin user page Setup  ======------##############>
+
+# Admin User page
+Route::get('/admin/user',[UsersController::class,'index'])->name('admin.user');
+
+#---====== Admin user status manage ======------>
+Route::get('/admin/user/status/{uid}/{status}',[UsersController::class,'status']);

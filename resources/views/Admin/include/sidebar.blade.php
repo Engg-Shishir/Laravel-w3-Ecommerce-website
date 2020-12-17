@@ -18,6 +18,13 @@
         </div><!--========= menu-item =========-->
       </a><!--========= sl-menu-link =========-->
 
+      <a href="{{route('admin.user')}}" class="sl-menu-link @yield('user')">
+        <div class="sl-menu-item">
+          <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
+          <span class="menu-item-label">User</span>
+        </div><!--========= menu-item =========-->
+      </a><!--========= sl-menu-link =========-->
+
       <a href="{{route('admin.categorys')}}" class="sl-menu-link @yield('category')">
         <div class="sl-menu-item">
           <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
