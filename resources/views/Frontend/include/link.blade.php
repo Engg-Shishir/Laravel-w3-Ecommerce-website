@@ -9,3 +9,4 @@
 <link rel="stylesheet" href="{{asset('frontend')}}/css/owl.carousel.min.css" type="text/css"><!--===owl.carousel===-->
 <link rel="stylesheet" href="{{asset('frontend')}}/css/slicknav.min.css" type="text/css"><!--===slicknav===-->
 <link rel="stylesheet" href="{{asset('frontend')}}/css/style.css" type="text/css"><!--===style===-->
+<link rel="stylesheet" href="{{asset('backend')}}/css/starlight.css"><!--===starlight===-->

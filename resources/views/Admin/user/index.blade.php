@@ -6,7 +6,7 @@
   <!--======== Page Breadcrumb=========-->
   <nav class="breadcrumb sl-breadcrumb">
     <a class="breadcrumb-item" href="{{url('/admin/home')}}">Dashboard</a>
-    <span class="breadcrumb-item active">Category</span>
+    <span class="breadcrumb-item active">User</span>
   </nav>
 
 <div class="sl-pagebody">

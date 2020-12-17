@@ -46,4 +46,19 @@ class FrontendController extends Controller
         return view('Frontend.pages.product_details',compact('product','related_product'));
     }
 
+
+    public function search(Request $request)
+    {
+        //$get = Product::where('name','LIKE','%'.$q.'%')->orWhere('email','LIKE','%'.$q.'%')->get();
+        $gets = Product::where('pro_name','LIKE','%'.$request->search.'%')->get();
+        if(count($gets) > 0){
+            return view('Frontend.pages.serchProduct',compact('gets'));
+
+        }else{
+            return view('Frontend.pages.404');
+        }
+
+
+    }
+
 }

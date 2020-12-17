@@ -293,8 +293,8 @@ Route::get('/brand/product/{id}',[FrontendController::class,'BrandProduct']);
 
 
 
-###############---====== Shop page Setup ======------##############>
-###############---======  Shop page Setup  ======------##############>
+###############---====== Product deatils page Setup ======------##############>
+###############---======  Product deatils page Setup  ======------##############>
 
 # Product deatils page
 Route::get('/product/details/{id}',[FrontendController::class,'productdetails']);
@@ -315,3 +315,16 @@ Route::get('/admin/user',[UsersController::class,'index'])->name('admin.user');
 
 #---====== Admin user status manage ======------>
 Route::get('/admin/user/status/{uid}/{status}',[UsersController::class,'status']);
+
+
+
+
+
+
+
+
+###############---====== Product search setup ======------##############>
+###############---======  Product search setup  ======------##############>
+
+#---====== product search  ======------>
+Route::post('/product/search',[FrontendController::class,'search']);
