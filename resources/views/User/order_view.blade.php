@@ -25,7 +25,15 @@
       <div class="col-md-8">
         <div class="card  bg-dark ">
           <div class="card-header text-center">
-            <span class="text-danger h3"><strong>Your Orders</strong></span>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <span class="text-danger h3"><strong>Your Orders</strong></span>
+              </div>
+              <div class="col-md-2">
+                <a href="{{url('/pdf/'.$orders->id)}}" class="btn btn-danger">PDF</a>
+              </div>
+            </div>
           </div>
             <div class="card-body">
               <table class="table table-bordered table-striped table-dark">

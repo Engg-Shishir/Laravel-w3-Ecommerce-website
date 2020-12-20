@@ -368,7 +368,7 @@
 + to add pagination get data this way
   + `Product::latest()->paginate(3);`
   + then go to `app/Providers/AppServiceProvider.php`
-  ```php
+  ```phpF
   use Illuminate\Pagination\Paginator;
   public function boot()
   {
@@ -420,4 +420,50 @@
 
 
 <strong style="color:red; font-size:30px;">21</strong>product search system with 404 page
+<br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+<strong style="color:red; font-size:30px;">21</strong>Laravel pdf genarator
+
++ `composer require barryvdh/laravel-dompdf`
++ Go to config/app.php
+  ```php
+  # In the $providers array add the service providers for this package.
+  Barryvdh\DomPDF\ServiceProvider::class,
+  ```
++ Go to config/app.php
+  ```php
+  # Add the facade of this package to the $aliases array.
+  'PDF' => Barryvdh\DomPDF\Facade::class,
+  ```
+
++ run `php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"`
+
++ Go to `PdfController.php` 
+  ```php
+  use PDF;
+  ```
++ set own pdf option or settings
+  `PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);`
+
++ create view for pdf
+  `$pdfs = PDF::loadView('Frontend.pages.pdf', ['orders'=>$orders]);`
+
++ you can change paper orientation `setPaper('a4', 'landscape')`
+
++ pdf action
+ `return $pdfs->setPaper('a4', 'landscape')->save('invoice.pdf')->stream('invoice.pdf');`
+
+
++ to style your pdf you should use inline css `inline css` ,otherwise it is not working properly
+
 <br><br><br><br><br><br>

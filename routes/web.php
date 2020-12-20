@@ -15,6 +15,7 @@ use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\User\PdfController;
 
 
 
@@ -328,3 +329,14 @@ Route::get('/admin/user/status/{uid}/{status}',[UsersController::class,'status']
 
 #---====== product search  ======------>
 Route::post('/product/search',[FrontendController::class,'search']);
+
+
+
+
+
+
+
+
+
+###############---====== Order pdf genarator ======------##############>
+Route::get('/pdf/{id}',[PdfController::class,'pdf']);

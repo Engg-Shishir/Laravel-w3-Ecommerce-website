@@ -7,9 +7,18 @@ use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\Shipping;
+
+use PDF;
+use App;
+
+
 
 class FrontendController extends Controller
 {    
+
     #<----======= Frontend Index Page ========----->
     public function index()
     {
